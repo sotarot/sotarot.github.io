@@ -1,0 +1,383 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+/* border:1px solid red */
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #141414;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+label {
+-webkit-text-stroke: 1px white;
+}
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover + avatar.img{
+  text-decoration: underline;
+  
+}
+
+a:active {
+  text-decoration: underline;
+}
+#hidden {
+display: none;
+}
+
+#color-picker {
+position: fixed;
+  bottom: 0;
+  margin: 5px;
+}
+#container {
+	z-index: 2;
+  position: absolute;
+  top: 7%;
+  left: 7%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -o-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+#topbar {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: SlateGray;
+  padding: 0.25rem;
+  margin: 20px;
+  text-align: center;
+}
+
+#topbar button {
+  background: none;
+  border: 2px solid #fff;
+  outline: none;
+  margin: 0.2rem;
+  padding: 0.4rem;
+  font: inherit;
+  font-size: 0.75rem;
+  line-height: 1;
+  color: #fff;
+  cursor: pointer;
+}
+
+#topbar button:hover {
+  background-color: #fff;
+  color: #444;
+}
+
+/* CSS for positioning the chat box */
+.chat-container {
+  z-index: -10;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Styles for the chat box */
+.chat-box {
+  max-width: 300px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the chat content */
+.chat-content {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+
+/* Styles for the avatar */
+.avatar {
+	display: flex;
+position: fixed;
+bottom: 0px;
+right: 0px;
+z-index: 0;
+}
+
+.avatar img {
+}
+
+/* Styles for the message box */
+.message-box {
+  flex: 1;
+}
+
+.message-box input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+
+
+.message {
+  position: fixed;
+  color:white;
+  top: 2.5rem;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0.5rem;
+  font-size: 0.5rem;
+  text-align: center;
+}
+.card {
+  position: absolute;
+  display: inline-block;
+  width: 8.24rem;
+  height: 14.25rem;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  cursor: default;
+}
+.card:before,
+.card:after {
+  position: absolute;
+  font-size: 0.7rem;
+  text-align: center;
+  line-height: 0.7rem;
+  white-space: pre-line;
+  width: 0.55rem;
+}
+.card:before {
+  top: 0.15rem;
+  left: 0;
+}
+.card:after {
+  bottom: 0.1rem;
+  right: 0;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.card .face {
+  height: 100%;
+  background-position: 50% 50%;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+}
+.card .back {
+  background-image: url("../images/cardback2.png");
+  background-position: 50% 50%;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.card.spades.rank1 .face {
+  background-image: url("../images/0.png");}
+.card.spades.rank2 .face {
+background-image: url("../images/1.png");}
+.card.spades.rank3 .face {
+background-image: url("../images/2.png");}
+.card.spades.rank4 .face {
+background-image: url("../images/3.png");}
+.card.spades.rank5 .face {
+background-image: url("../images/4.png");}
+.card.spades.rank6 .face {
+background-image: url("../images/5.png");}
+.card.spades.rank7 .face {
+background-image: url("../images/6.png");}
+.card.spades.rank8 .face {
+background-image: url("../images/7.png");}
+.card.spades.rank9 .face {
+background-image: url("../images/8.png");}
+.card.spades.rank10 .face {
+background-image: url("../images/9.png");}
+.card.spades.rank11 .face {
+background-image: url("../images/10.png");}
+.card.spades.rank12 .face {
+background-image: url("../images/11.png");}
+.card.spades.rank13 .face {
+background-image: url("../images/12.png");}
+.card.spades.rank14 .face {
+background-image: url("../images/13.png");}
+.card.spades.rank15 .face {
+background-image: url("../images/14.png");}
+.card.spades.rank16 .face {
+background-image: url("../images/15.png");}
+.card.spades.rank17 .face {
+background-image: url("../images/16.png");}
+.card.spades.rank18 .face {
+background-image: url("../images/17.png");}
+.card.spades.rank19 .face {
+background-image: url("../images/18.png");}
+.card.spades.rank20 .face {
+background-image: url("../images/19.png");}
+.card.spades.rank21 .face {
+background-image: url("../images/20.png");}
+.card.spades.rank22 .face {
+background-image: url("../images/21.png");}
+.card.hearts.rank1 .face {
+background-image: url("../images/22.png");}
+.card.hearts.rank2 .face {
+background-image: url("../images/23.png");}
+.card.hearts.rank3 .face {
+background-image: url("../images/24.png");}
+.card.hearts.rank4 .face {
+background-image: url("../images/25.png");}
+.card.hearts.rank5 .face {
+background-image: url("../images/26.png");}
+.card.hearts.rank6 .face {
+background-image: url("../images/27.png");}
+.card.hearts.rank7 .face {
+background-image: url("../images/28.png");}
+.card.hearts.rank8 .face {
+background-image: url("../images/29.png");}
+.card.hearts.rank9 .face {
+background-image: url("../images/30.png");}
+.card.hearts.rank10 .face {
+background-image: url("../images/31.png");}
+.card.hearts.rank11 .face {
+background-image: url("../images/32.png");}
+.card.hearts.rank12 .face {
+background-image: url("../images/33.png");}
+.card.hearts.rank13 .face {
+background-image: url("../images/34.png");}
+.card.hearts.rank14 .face {
+background-image: url("../images/35.png");}
+.card.hearts.rank15 .face {
+background-image: url("../images/36.png");}
+.card.hearts.rank16 .face {
+background-image: url("../images/37.png");}
+.card.hearts.rank17 .face {
+background-image: url("../images/38.png");}
+.card.hearts.rank18 .face {
+background-image: url("../images/39.png");}
+.card.hearts.rank19 .face {
+background-image: url("../images/40.png");}
+.card.hearts.rank20 .face {
+background-image: url("../images/41.png");}
+.card.hearts.rank21 .face {
+background-image: url("../images/42.png");}
+.card.hearts.rank22 .face {
+background-image: url("../images/43.png");}
+.card.clubs.rank1 .face {
+background-image: url("../images/44.png");}
+.card.clubs.rank2 .face {
+background-image: url("../images/45.png");}
+.card.clubs.rank3 .face {
+background-image: url("../images/46.png");}
+.card.clubs.rank4 .face {
+background-image: url("../images/47.png");}
+.card.clubs.rank5 .face {
+background-image: url("../images/48.png");}
+.card.clubs.rank6 .face {
+background-image: url("../images/49.png");}
+.card.clubs.rank7 .face {
+background-image: url("../images/50.png");}
+.card.clubs.rank8 .face {
+background-image: url("../images/51.png");}
+.card.clubs.rank9 .face {
+background-image: url("../images/52.png");}
+.card.clubs.rank10 .face {
+background-image: url("../images/53.png");}
+.card.clubs.rank11 .face {
+background-image: url("../images/54.png");}
+.card.clubs.rank12 .face {
+background-image: url("../images/55.png");}
+.card.clubs.rank13 .face {
+background-image: url("../images/56.png");}
+.card.clubs.rank14 .face {
+background-image: url("../images/57.png");}
+.card.clubs.rank15 .face {
+background-image: url("../images/58.png");}
+.card.clubs.rank16 .face {
+background-image: url("../images/59.png");}
+.card.clubs.rank17 .face {
+background-image: url("../images/60.png");}
+.card.clubs.rank18 .face {
+background-image: url("../images/61.png");}
+.card.clubs.rank19 .face {
+background-image: url("../images/62.png");}
+.card.clubs.rank20 .face {
+background-image: url("../images/63.png");}
+.card.clubs.rank21 .face {
+background-image: url("../images/64.png");}
+.card.clubs.rank22 .face {
+background-image: url("../images/65.png");}
+.card.diamonds.rank1 .face {
+background-image: url("../images/66.png");}
+.card.diamonds.rank2 .face {
+background-image: url("../images/67.png");}
+.card.diamonds.rank3 .face {
+background-image: url("../images/68.png");}
+.card.diamonds.rank4 .face {
+background-image: url("../images/69.png");}
+.card.diamonds.rank5 .face {
+background-image: url("../images/70.png");}
+.card.diamonds.rank6 .face {
+background-image: url("../images/71.png");}
+.card.diamonds.rank7 .face {
+background-image: url("../images/72.png");}
+.card.diamonds.rank8 .face {
+background-image: url("../images/73.png");}
+.card.diamonds.rank9 .face {
+background-image: url("../images/74.png");}
+.card.diamonds.rank10 .face {
+background-image: url("../images/75.png");}
+.card.diamonds.rank11 .face {
+background-image: url("../images/76.png");}
+.card.diamonds.rank12 .face {
+background-image: url("../images/77.png");}
+.card.diamonds.rank13 .face {
+background-image: url("../images/0.png");}
+.card.diamonds.rank14 .face {
+background-image: url("../images/0.png");}
+.card.diamonds.rank15 .face {
+background-image: url("../images/0.png");}
+.card.diamonds.rank16 .face {
+background-image: url("../images/0.png");}
+.card.diamonds.rank17 .face {
+background-image: url("../images/0.png");}
+.card.diamonds.rank18 .face {
+background-image: url("../images/0.png");}
+.card.diamonds.rank19 .face {
+background-image: url("../images/0.png");}
+.card.diamonds.rank20 .face {
+background-image: url("../images/0.png");}
+.card.diamonds.rank21 .face {
+background-image: url("../images/0.png");}
+.card.diamonds.rank22 .face {
+background-image: url("../images/0.png");}
+.card.majorarcana.rank1 .face {
+background-image: url("../images/0.png");}
